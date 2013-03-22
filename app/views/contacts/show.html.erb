@@ -15,6 +15,14 @@
   <%= @contact.phone %>
 </p>
 
+<p>
+  <b>Addresses:</b>
+  <ul>
+  <% @contact.addresses.each do |address| %>
+  	<li><%= address.address %></li>
+  <%end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

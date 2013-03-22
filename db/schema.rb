@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130319221404) do
 
   create_table "addresses", :force => true do |t|
-    t.integer  "id_contact"
+    t.integer  "contact_id"
     t.string   "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

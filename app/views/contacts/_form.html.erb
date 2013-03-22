@@ -23,6 +23,13 @@
     <%= f.label :phone %><br />
     <%= f.text_field :phone %>
   </div>
+
+  <div class="field">
+    <%= f.fields_for :addresses do |address|  %>
+      <%= address.label :address %><br />
+      <%= address.text_field :address %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -25,6 +25,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new.json
   def new
     @contact = Contact.new
+    @contact.addresses.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.new(params[:contact])
+    #@contact.addresses.build(params[:address])
 
     respond_to do |format|
       if @contact.save
