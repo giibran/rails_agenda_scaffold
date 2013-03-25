@@ -4,5 +4,5 @@ class Contact < ActiveRecord::Base
   validates :name, :presence => true, :length => {:maximum => 120}
   validates :last_name, :presence => true, :length => {:maximum => 120}
   validates :phone, :presence => true, :length => {:maximum => 20}
-  accepts_nested_attributes_for :addresses
+  accepts_nested_attributes_for :addresses, allow_destroy: true
 end

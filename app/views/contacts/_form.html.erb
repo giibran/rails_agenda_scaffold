@@ -28,7 +28,10 @@
     <%= f.fields_for :addresses do |address|  %>
       <%= address.label :address %><br />
       <%= address.text_field :address %>
+      <%= address.hidden_field :_destroy %>
+      <%= link_to "remove", '#', class: "remove_fields" %><br />
     <% end %>
+    <%= link_to_add_fields "Add address", f, :addresses %><br />
   </div>
   <div class="actions">
     <%= f.submit %>
