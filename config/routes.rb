@@ -1,5 +1,5 @@
 Agenda::Application.routes.draw do
-  resources :addresses
+  #resources :addresses, :except => 'show'
 
 
   resources :contacts
