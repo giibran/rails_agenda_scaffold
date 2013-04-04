@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   # GET /contacts/new.json
   def new
-    @contact = Contact.new
+    @contact = Contact.new(params[:id])
     @contact.addresses.build
 
     respond_to do |format|

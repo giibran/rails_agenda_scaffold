@@ -17,12 +17,9 @@
     <td><%= contact.last_name %></td>
     <td><%= contact.phone %></td>
     <td>
-    <td>
       <% contact.addresses.each do |address| %>
       <%= address.address %>
       <%end %>
-    </td>
-  
     </td>
     <td><%= link_to 'Show', contact %></td>
     <td><%= link_to 'Edit', edit_contact_path(contact) %></td>

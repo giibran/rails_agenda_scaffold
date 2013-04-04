@@ -11,6 +11,10 @@
     </div>
   <% end %>
   <div class="field">
+    <%debugger%>
+    <%= f.hidden_field :contact_id, :value => params[:contact_id] %><br />
+  </div>
+  <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address %>
   </div>
