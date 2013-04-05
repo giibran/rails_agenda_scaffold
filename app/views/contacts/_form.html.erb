@@ -25,13 +25,10 @@
   </div>
 
   <div class="field">
-    <%= f.fields_for :addresses do |address|  %>
-      <%= address.label :address %><br />
-      <%= address.text_field :address %>
-      <%= address.hidden_field :_destroy %>
-      <%= link_to "remove", '#', class: "remove_fields" %><br />
+    <%= f.fields_for :addresses do |address| %>
+      <%= render :partial => 'address_fields', :locals => {f:address} %>
     <% end %>
-    <%= link_to 'New Address', new_address_path(:contact_id => @contact.id) %>
+    <p><%= link_to_add_fields "Add Address", f, :addresses %></p>
   </div>
   <div class="actions">
     <%= f.submit %>
